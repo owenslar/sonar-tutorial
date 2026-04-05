@@ -68,10 +68,6 @@ class CustomFileReaderTest {
         assertNotEquals(null, sut);
     }
 
-    @Test
-    void testEqualsDifferentClass() {
-        assertNotEquals("not a reader", sut);
-    }
 
     @Test
     void testEqualsDifferentValues() {

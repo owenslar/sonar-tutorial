@@ -14,7 +14,7 @@ class CustomFileReader {
     /**
      * The scanner that will read the dictionary
      */
-    private String path;
+    private final String path;
 
     /**
      * The sentence that will be constructed
