@@ -91,5 +91,6 @@ class CustomFileReaderTest {
         other.setNewSentence("Same");
 
         assertEquals(sut, other);
+
     }
 }
