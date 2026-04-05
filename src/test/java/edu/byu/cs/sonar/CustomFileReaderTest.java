@@ -60,17 +60,17 @@ class CustomFileReaderTest {
 
     @Test
     void testEqualsSameObject() {
-        assertTrue(sut.equals(sut));
+        assertEquals(sut, sut);
     }
 
     @Test
     void testEqualsNull() {
-        assertFalse(sut.equals(null));
+        assertNotEquals(null, sut);
     }
 
     @Test
     void testEqualsDifferentClass() {
-        assertFalse(sut.equals("not a reader"));
+        assertNotEquals("not a reader", sut);
     }
 
     @Test
@@ -78,7 +78,7 @@ class CustomFileReaderTest {
         CustomFileReader other = new CustomFileReader("readMe1.txt");
         other.setNewSentence("Different");
 
-        assertFalse(sut.equals(other));
+        assertNotEquals(sut, other);
     }
 
     @Test
@@ -90,6 +90,6 @@ class CustomFileReaderTest {
         other.howManyWordsInFile();
         other.setNewSentence("Same");
 
-        assertTrue(sut.equals(other));
+        assertEquals(sut, other);
     }
 }
